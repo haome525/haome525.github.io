@@ -89,8 +89,13 @@ tags:
 
 ### 侧边栏
 
-看右边:
-![](https://raw.githubusercontent.com/qiubaiying/qiubaiying.github.io/master/img/readme-side.png)
+Go学习:
+![](https://cdn.tobebetterjavaer.com/tobebetterjavaer/images/xuexiluxian/go-7.jpg)
+
+JAVA学习:
+[JAVA学习](https://javabetter.cn/xuexiluxian/go.html)
+
+![](https://camo.githubusercontent.com/f28fe09f0ef0b6967e8e3bdf71ea1588da7e73fefce906663a7d625adcff28d0/68747470733a2f2f63646e2e746f62656265747465726a61766165722e636f6d2f746f62656265747465726a61766165722f696d616765732f746f62656265747465726a61766165722d6d61702e706e67)
 
 设置是在 `_config.yml`文件里面的`Sidebar settings`那块。
 
