@@ -1,13 +1,13 @@
 # Site settings
-title: NIANHUAIJU Blog
-SEOTitle: nianhuaiju的博客 | BY Blog
+title: haome525 Blog
+SEOTitle: haome525的博客 | BY Blog
 header-img: img/post-bg-desk.jpg
 email: haome525@gmail.com
 description: "Every failure is leading towards success."
-keyword: "BY, BY Blog, nianhuaiju的博客, nianhuaiju, iOS, Apple, iPhone"
-url: "http://nianhuaiju.github.io"          # your host, for absolute URL
+keyword: "BY, BY Blog, haome525的博客, haome525, iOS, Apple, iPhone"
+url: "http://haome525.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/nianhuaiju/nianhuaiju.github.io.git" # you code repository
+github_repo: "https://github.com/haome525/haome525.github.io.git" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
@@ -18,9 +18,9 @@ sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's us
 
 # SNS settings
 RSS: false
-# weibo_username:     nianhuaiju
-zhihu_username:     nianhuaiju
-github_username:    nianhuaiju
+# weibo_username:     haome525
+zhihu_username:     haome525
+github_username:    haome525
 # facebook_username:  baiying.qiu.7
 # jianshu_username:   e71990ada2fd
 # twitter_username:   qiubaiying
@@ -64,7 +64,7 @@ gitalk:
   enable: true    #是否开启Gitalk评论
   clientID: f2c84e7629bb1446c1a4                            #生成的clientID
   clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d    #生成的clientSecret
-  repo: nianhuaiju.github.io    #仓库名称
+  repo: haome525.github.io    #仓库名称
   owner: qiubaiying    #github用户名
   admin: qiubaiying
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
