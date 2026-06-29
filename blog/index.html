@@ -1,0 +1,52 @@
+---
+layout: modern-page
+title: 博客
+description: 技术文章与思考笔记
+pagination:
+  enabled: true
+---
+
+<!-- Blog Hero -->
+<section class="page-hero">
+  <h1>博客</h1>
+  <p>技术沉淀 · 学习笔记 · 思考记录</p>
+</section>
+
+<!-- Blog List -->
+<section class="blog-list-container">
+  {% for post in paginator.posts %}
+  <article class="blog-list-item reveal">
+    <div class="blog-list-meta">
+      <span><i class="far fa-calendar-alt"></i> {{ post.date | date: "%Y-%m-%d" }}</span>
+      {% if post.tags.size > 0 %}
+      &nbsp;·&nbsp;
+      {% for tag in post.tags %}
+      <span class="blog-tag">#{{ tag }}</span>
+      {% endfor %}
+      {% endif %}
+    </div>
+    <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+    {% if post.subtitle %}
+    <div class="blog-list-excerpt">{{ post.subtitle }}</div>
+    {% endif %}
+  </article>
+  {% endfor %}
+
+  <!-- Pagination -->
+  {% if paginator.total_pages > 1 %}
+  <div class="blog-pagination">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn-secondary">
+      <i class="fas fa-arrow-left"></i> 较新文章
+    </a>
+    {% else %}
+    <div></div>
+    {% endif %}
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn-secondary">
+      较旧文章 <i class="fas fa-arrow-right"></i>
+    </a>
+    {% endif %}
+  </div>
+  {% endif %}
+</section>

@@ -1,17 +1,13 @@
 /* ===========================================================
- * sw.js
+ * sw.js — Service Worker for haome525.github.io
  * ===========================================================
- * Copyright 2016 @huxpro
- * Licensed under Apache 2.0 
- * Register service worker.
+ * Based on Hux's service worker pattern.
  * ========================================================== */
 
 const PRECACHE = 'precache-v1';
 const RUNTIME = 'runtime';
 const HOSTNAME_WHITELIST = [
   self.location.hostname,
-  "huangxuan.me",
-  "yanshuo.io",
   "cdnjs.cloudflare.com"
 ]
 
@@ -50,10 +46,10 @@ const isNavigationReq = (req) => (req.mode === 'navigate' || (req.method === 'GE
 // P.S. An url.pathname has no '.' can not indicate it ends with extension (e.g. /api/version/1.2/)
 const endWithExtension = (req) => Boolean(new URL(req.url).pathname.match(/\.\w+$/))
 
-// Redirect in SW manually fixed github pages arbitray 404s on things?blah 
+// Redirect in SW manually fixed github pages 404s on repo?blah
 // what we want:
-//    repo?blah -> !(gh 404) -> sw 302 -> repo/?blah 
-//    .ext?blah -> !(sw 302 -> .ext/?blah -> gh 404) -> .ext?blah 
+//    repo?blah -> !(gh 404) -> sw 302 -> repo/?blah
+//    .ext?blah -> !(sw 302 -> .ext/?blah -> gh 404) -> .ext?blah
 // If It's a navigation req and it's url.pathname isn't end with '/' or '.ext'
 // it should be a dir/repo request and need to be fixed (a.k.a be redirected)
 // Tracking https://twitter.com/Huxpro/status/798816417097224193

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="ink" data-mode="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}haome525 — AI · 全栈 · 创造{% endif %}">
+  <meta name="keywords" content="haome525, AI, 人工智能, 全栈开发, iOS, RaaS, 博客">
+
+  <title>{% if page.title %}{{ page.title }} — haome525{% else %}haome525 — AI · 全栈 · 创造{% endif %}</title>
+
+  <link rel="icon" href="/blog/img/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/blog/img/apple-touch-icon.png">
+
+  <!-- 首屏防闪：在渲染前读取主题偏好 -->
+  <script>
+    (function () {
+      try {
+        var root = document.documentElement;
+        var t = localStorage.getItem('hao-theme') || 'ink';
+        var m = localStorage.getItem('hao-mode');
+        if (!m) {
+          m = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        root.setAttribute('data-theme', t);
+        root.setAttribute('data-mode', m);
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+SC:wght@400;600;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  {% if page.extra_css %}
+  <link rel="stylesheet" href="{{ page.extra_css }}">
+  {% endif %}
+</head>
+<body>
+
+  {% include nav-modern.html %}
+
+  {{ content }}
+
+  {% include footer-modern.html %}
+
+  <!-- Main JavaScript -->
+  <script src="/assets/js/main.js"></script>
+
+  {% if page.extra_js %}
+  <script src="{{ page.extra_js }}"></script>
+  {% endif %}
+</body>
+</html>

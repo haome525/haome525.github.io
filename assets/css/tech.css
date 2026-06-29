@@ -1,0 +1,248 @@
+/* ============================================================
+   技术页专用样式 — 技术栈分类 / 词云 / 个人技术架构图
+   仅在 /tech/ 页面通过 extra_css 加载，复用 main.css 设计令牌
+   ============================================================ */
+
+/* ---------- 技术栈分类标签 ---------- */
+.tech-categories {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--space-lg);
+}
+
+.tech-cat {
+  margin-bottom: var(--space-3xl);
+}
+
+.tech-cat-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--border);
+}
+
+.tech-cat-num {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-3);
+}
+
+.tech-cat-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.tech-cat-desc {
+  font-size: 0.875rem;
+  color: var(--text-3);
+  margin-left: auto;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.tech-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 7px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: var(--bg-alt);
+  color: var(--text-2);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.tech-tag i {
+  font-size: 0.95rem;
+  color: var(--accent);
+}
+
+.tech-tag:hover {
+  border-color: var(--accent);
+  color: var(--text);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ---------- 词云 ---------- */
+.wordcloud {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--space-lg);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.wordcloud-words {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-sm) var(--space-md);
+  max-width: 900px;
+  margin: var(--space-2xl) auto 0;
+}
+
+.wordcloud .word {
+  font-family: var(--font-mono);
+  color: var(--text-2);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  cursor: default;
+  white-space: nowrap;
+}
+
+.wordcloud .word:hover {
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.wordcloud .word.s-xl { font-size: 2.4rem; font-weight: 700; color: var(--text); }
+.wordcloud .word.s-lg { font-size: 1.8rem; font-weight: 600; }
+.wordcloud .word.s-md { font-size: 1.3rem; font-weight: 500; }
+.wordcloud .word.s-sm { font-size: 1rem; font-weight: 400; color: var(--text-3); }
+.wordcloud .word.accent { color: var(--accent); }
+
+/* ---------- 个人技术架构图 ---------- */
+.arch-section {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--space-lg) var(--space-4xl);
+}
+
+.arch-diagram {
+  margin-top: var(--space-2xl);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg-alt);
+  box-shadow: var(--shadow-sm);
+}
+
+.arch-layer {
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid var(--border);
+  transition: background var(--transition-fast);
+}
+
+.arch-layer:last-child { border-bottom: none; }
+
+.arch-layer:hover { background: var(--bg-soft); }
+
+.arch-layer-label {
+  flex: 0 0 160px;
+  padding: var(--space-lg) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid var(--border);
+  background: var(--bg-soft);
+}
+
+.arch-layer-name {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.arch-layer-en {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-3);
+  margin-top: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.arch-layer-chips {
+  flex: 1;
+  padding: var(--space-lg);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.arch-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-2);
+  font-family: var(--font-mono);
+}
+
+.arch-chip i { color: var(--accent); font-size: 0.85rem; }
+
+/* 签名层高亮：AI 与 RaaS */
+.arch-layer.signature {
+  position: relative;
+}
+
+.arch-layer.signature .arch-layer-label {
+  background: var(--accent-soft);
+}
+
+.arch-layer.signature .arch-layer-name {
+  color: var(--accent);
+}
+
+.arch-layer.signature::before {
+  content: '★';
+  position: absolute;
+  left: -1px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--accent);
+  font-size: 0.9rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-left: none;
+  border-radius: 0 var(--radius-full) var(--radius-full) 0;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arch-note {
+  margin-top: var(--space-lg);
+  padding: var(--space-md) var(--space-lg);
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.9rem;
+  color: var(--text-2);
+  line-height: 1.7;
+}
+
+.arch-note strong { color: var(--accent); }
+
+@media (max-width: 640px) {
+  .arch-layer { flex-direction: column; }
+  .arch-layer-label {
+    flex: none;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    flex-direction: row;
+    align-items: baseline;
+    gap: var(--space-sm);
+  }
+  .tech-cat-desc { display: none; }
+}
