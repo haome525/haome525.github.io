@@ -381,6 +381,257 @@ const NAV_DATA = {
       id: 'leetcode', name: 'LeetCode', desc: '算法刷题平台',
       url: 'https://leetcode.cn', icon: 'https://leetcode.cn/favicon.ico',
       category: 'learning', tags: ['算法', '刷题', '面试']
+    },
+
+    // ===== 更多AI工具 =====
+    {
+      id: 'tongyi-wanxiang', name: '通义万相', desc: '阿里推出的AI图像创作平台',
+      url: 'https://tongyi.aliyun.com/wanxiang', icon: 'https://tongyi.aliyun.com/favicon.ico',
+      category: 'ai', tags: ['图像', '创作', '阿里']
+    },
+    {
+      id: 'keling', name: '可灵AI', desc: '快手推出的AI视频生成工具',
+      url: 'https://klingai.kuaishou.com', icon: 'https://klingai.kuaishou.com/favicon.ico',
+      category: 'ai', tags: ['视频', '生成', '快手']
+    },
+    {
+      id: 'jimeng', name: '即梦', desc: '抖音推出的AI图像创作工具',
+      url: 'https://jimeng.jianying.com', icon: 'https://jimeng.jianying.com/favicon.ico',
+      category: 'ai', tags: ['图像', '创作', '抖音']
+    },
+    {
+      id: 'codeium', name: 'Codeium', desc: '免费AI代码补全工具',
+      url: 'https://codeium.com', icon: 'https://codeium.com/favicon.ico',
+      category: 'ai', tags: ['编程', '免费', '代码补全']
+    },
+    {
+      id: 'tabnine', name: 'Tabnine', desc: 'AI代码助手，支持多语言',
+      url: 'https://www.tabnine.com', icon: 'https://www.tabnine.com/favicon.ico',
+      category: 'ai', tags: ['编程', '代码补全', '多语言']
+    },
+    {
+      id: 'moonshot', name: '月之暗面', desc: 'Kimi背后的AI公司',
+      url: 'https://www.moonshot.cn', icon: 'https://www.moonshot.cn/favicon.ico',
+      category: 'ai', tags: ['大模型', 'AI', '国产']
+    },
+    {
+      id: 'minimax', name: 'MiniMax', desc: '稀宇科技推出的AI平台',
+      url: 'https://www.minimaxi.com', icon: 'https://www.minimaxi.com/favicon.ico',
+      category: 'ai', tags: ['大模型', 'AI', '国产']
+    },
+    {
+      id: 'baichuan', name: '百川智能', desc: '王小川创立的AI公司',
+      url: 'https://www.baichuan-ai.com', icon: 'https://www.baichuan-ai.com/favicon.ico',
+      category: 'ai', tags: ['大模型', 'AI', '国产']
+    },
+
+    // ===== 更多软件架构 =====
+    {
+      id: 'istio', name: 'Istio', desc: '服务网格，流量管理',
+      url: 'https://istio.io', icon: 'https://istio.io/favicon.ico',
+      category: 'architecture', tags: ['服务网格', '流量管理', '云原生']
+    },
+    {
+      id: 'consul', name: 'HashiCorp Consul', desc: '服务发现和配置',
+      url: 'https://www.consul.io', icon: 'https://www.consul.io/favicon.ico',
+      category: 'architecture', tags: ['服务发现', '配置', 'HashiCorp']
+    },
+    {
+      id: 'etcd', name: 'etcd', desc: '分布式键值存储',
+      url: 'https://etcd.io', icon: 'https://etcd.io/favicon.ico',
+      category: 'architecture', tags: ['分布式', '键值存储', 'Kubernetes']
+    },
+    {
+      id: 'zookeeper', name: 'Apache ZooKeeper', desc: '分布式协调服务',
+      url: 'https://zookeeper.apache.org', icon: 'https://zookeeper.apache.org/favicon.ico',
+      category: 'architecture', tags: ['分布式', '协调', 'Apache']
+    },
+
+    // ===== 更多前端技术 =====
+    {
+      id: 'angular', name: 'Angular', desc: 'Google推出的前端框架',
+      url: 'https://angular.dev', icon: 'https://angular.dev/favicon.ico',
+      category: 'frontend', tags: ['框架', 'Google', 'TypeScript']
+    },
+    {
+      id: 'svelte', name: 'Svelte', desc: '编译时前端框架',
+      url: 'https://svelte.dev', icon: 'https://svelte.dev/favicon.ico',
+      category: 'frontend', tags: ['框架', '编译时', '轻量']
+    },
+    {
+      id: 'solidjs', name: 'SolidJS', desc: '高性能响应式UI框架',
+      url: 'https://www.solidjs.com', icon: 'https://www.solidjs.com/favicon.ico',
+      category: 'frontend', tags: ['框架', '响应式', '高性能']
+    },
+    {
+      id: 'alova', name: 'Alova', desc: '请求策略库，替代Axios',
+      url: 'https://alova.js.org', icon: 'https://alova.js.org/favicon.ico',
+      category: 'frontend', tags: ['请求', 'HTTP', '国产']
+    },
+
+    // ===== 更多后端技术 =====
+    {
+      id: 'django', name: 'Django', desc: 'Python全栈Web框架',
+      url: 'https://www.djangoproject.com', icon: 'https://www.djangoproject.com/favicon.ico',
+      category: 'backend', tags: ['Python', '全栈', 'ORM']
+    },
+    {
+      id: 'flask', name: 'Flask', desc: 'Python轻量Web框架',
+      url: 'https://flask.palletsprojects.com', icon: 'https://flask.palletsprojects.com/favicon.ico',
+      category: 'backend', tags: ['Python', '轻量', '微框架']
+    },
+    {
+      id: 'fiber', name: 'Fiber', desc: 'Go语言Web框架',
+      url: 'https://gofiber.io', icon: 'https://gofiber.io/favicon.ico',
+      category: 'backend', tags: ['Go', '高性能', 'Express风格']
+    },
+    {
+      id: 'mysql', name: 'MySQL', desc: '最流行的开源数据库',
+      url: 'https://www.mysql.com', icon: 'https://www.mysql.com/favicon.ico',
+      category: 'backend', tags: ['数据库', '关系型', '流行']
+    },
+    {
+      id: 'mongodb', name: 'MongoDB', desc: 'NoSQL文档数据库',
+      url: 'https://www.mongodb.com', icon: 'https://www.mongodb.com/favicon.ico',
+      category: 'backend', tags: ['NoSQL', '文档', '灵活']
+    },
+
+    // ===== 更多国产化软件 =====
+    {
+      id: 'openharmony', name: 'OpenHarmony', desc: '华为开源操作系统',
+      url: 'https://www.openharmony.cn', icon: 'https://www.openharmony.cn/favicon.ico',
+      category: 'domestic', tags: ['操作系统', '华为', '开源']
+    },
+    {
+      id: 'anolis', name: 'Anolis OS', desc: '阿里开源操作系统',
+      url: 'https://www.anolisos.org', icon: 'https://www.anolisos.org/favicon.ico',
+      category: 'domestic', tags: ['操作系统', '阿里', '开源']
+    },
+    {
+      id: 'kingbase', name: '人大金仓', desc: '国产数据库厂商',
+      url: 'https://www.kingbase.com.cn', icon: 'https://www.kingbase.com.cn/favicon.ico',
+      category: 'domestic', tags: ['数据库', '国产', '企业级']
+    },
+    {
+      id: 'gbase', name: 'GBase', desc: '南大通用数据库',
+      url: 'https://www.gbase.cn', icon: 'https://www.gbase.cn/favicon.ico',
+      category: 'domestic', tags: ['数据库', '国产', '分析型']
+    },
+    {
+      id: 'tongweb', name: '东方通', desc: '国产中间件厂商',
+      url: 'https://www.tongweb.com.cn', icon: 'https://www.tongweb.com.cn/favicon.ico',
+      category: 'domestic', tags: ['中间件', '国产', '应用服务器']
+    },
+    {
+      id: 'pixso', name: 'Pixso', desc: '国产在线设计工具',
+      url: 'https://pixso.cn', icon: 'https://pixso.cn/favicon.ico',
+      category: 'domestic', tags: ['设计', '协作', '国产']
+    },
+    {
+      id: 'modao', name: '墨刀', desc: '国产原型设计工具',
+      url: 'https://modao.cc', icon: 'https://modao.cc/favicon.ico',
+      category: 'domestic', tags: ['原型', '设计', '国产']
+    },
+    {
+      id: 'yealink', name: '亿联', desc: '国产视频会议设备',
+      url: 'https://www.yealink.com.cn', icon: 'https://www.yealink.com.cn/favicon.ico',
+      category: 'domestic', tags: ['视频会议', '硬件', '国产']
+    },
+
+    // ===== 更多云原生 =====
+    {
+      id: 'podman', name: 'Podman', desc: '无守护进程的容器引擎',
+      url: 'https://podman.io', icon: 'https://podman.io/favicon.ico',
+      category: 'cloudnative', tags: ['容器', '无守护进程', 'Red Hat']
+    },
+    {
+      id: 'harbor', name: 'Harbor', desc: '容器镜像仓库',
+      url: 'https://goharbor.io', icon: 'https://goharbor.io/favicon.ico',
+      category: 'cloudnative', tags: ['镜像', '仓库', 'CNCF']
+    },
+    {
+      id: 'prometheus', name: 'Prometheus', desc: '监控和告警系统',
+      url: 'https://prometheus.io', icon: 'https://prometheus.io/favicon.ico',
+      category: 'cloudnative', tags: ['监控', '告警', 'CNCF']
+    },
+    {
+      id: 'grafana', name: 'Grafana', desc: '可视化监控面板',
+      url: 'https://grafana.com', icon: 'https://grafana.com/favicon.ico',
+      category: 'cloudnative', tags: ['可视化', '监控', '仪表盘']
+    },
+    {
+      id: 'argocd', name: 'ArgoCD', desc: 'GitOps持续部署工具',
+      url: 'https://argo-cd.readthedocs.io', icon: 'https://argo-cd.readthedocs.io/favicon.ico',
+      category: 'cloudnative', tags: ['GitOps', 'CD', 'Kubernetes']
+    },
+    {
+      id: 'tekton', name: 'Tekton', desc: '云原生CI/CD框架',
+      url: 'https://tekton.dev', icon: 'https://tekton.dev/favicon.ico',
+      category: 'cloudnative', tags: ['CI/CD', 'Kubernetes', 'CNCF']
+    },
+
+    // ===== 更多开发工具 =====
+    {
+      id: 'jetbrains', name: 'JetBrains', desc: '专业IDE厂商（IDEA/WebStorm等）',
+      url: 'https://www.jetbrains.com', icon: 'https://www.jetbrains.com/favicon.ico',
+      category: 'devtools', tags: ['IDE', 'Java', '专业']
+    },
+    {
+      id: 'vim', name: 'Vim/Neovim', desc: '终端文本编辑器',
+      url: 'https://www.vim.org', icon: 'https://www.vim.org/favicon.ico',
+      category: 'devtools', tags: ['编辑器', '终端', '高效']
+    },
+    {
+      id: 'insomnia', name: 'Insomnia', desc: 'API设计和测试工具',
+      url: 'https://insomnia.rest', icon: 'https://insomnia.rest/favicon.ico',
+      category: 'devtools', tags: ['API', '测试', '设计']
+    },
+    {
+      id: 'dbeaver', name: 'DBeaver', desc: '通用数据库管理工具',
+      url: 'https://dbeaver.io', icon: 'https://dbeaver.io/favicon.ico',
+      category: 'devtools', tags: ['数据库', '管理', '开源']
+    },
+    {
+      id: 'warp', name: 'Warp', desc: '现代终端工具',
+      url: 'https://www.warp.dev', icon: 'https://www.warp.dev/favicon.ico',
+      category: 'devtools', tags: ['终端', '现代', 'AI']
+    },
+    {
+      id: 'raycast', name: 'Raycast', desc: 'Mac效率启动器',
+      url: 'https://www.raycast.com', icon: 'https://www.raycast.com/favicon.ico',
+      category: 'devtools', tags: ['启动器', 'Mac', '效率']
+    },
+
+    // ===== 更多学习资源 =====
+    {
+      id: 'github-learn', name: 'GitHub Skills', desc: 'GitHub官方学习平台',
+      url: 'https://skills.github.com', icon: 'https://github.com/favicon.ico',
+      category: 'learning', tags: ['学习', 'GitHub', '互动']
+    },
+    {
+      id: 'freecodecamp', name: 'freeCodeCamp', desc: '免费编程学习平台',
+      url: 'https://www.freecodecamp.org', icon: 'https://www.freecodecamp.org/favicon.ico',
+      category: 'learning', tags: ['免费', '编程', '实战']
+    },
+    {
+      id: 'codecademy', name: 'Codecademy', desc: '交互式编程学习',
+      url: 'https://www.codecademy.com', icon: 'https://www.codecademy.com/favicon.ico',
+      category: 'learning', tags: ['交互', '编程', '课程']
+    },
+    {
+      id: 'geekbang', name: '极客时间', desc: '中文技术课程平台',
+      url: 'https://time.geekbang.org', icon: 'https://time.geekbang.org/favicon.ico',
+      category: 'learning', tags: ['课程', '中文', '技术']
+    },
+    {
+      id: 'imooc', name: '慕课网', desc: '中文IT技能学习平台',
+      url: 'https://www.imooc.com', icon: 'https://www.imooc.com/favicon.ico',
+      category: 'learning', tags: ['课程', '中文', 'IT']
+    },
+    {
+      id: 'runoob', name: '菜鸟教程', desc: '编程技术入门教程',
+      url: 'https://www.runoob.com', icon: 'https://www.runoob.com/favicon.ico',
+      category: 'learning', tags: ['教程', '入门', '中文']
     }
   ]
 };

@@ -242,6 +242,48 @@ a:hover { color: var(--accent-light); }
   font-size: 13px;
 }
 
+/* ===== 搜索高亮 ===== */
+mark {
+  background: var(--accent-bg);
+  color: var(--accent);
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+/* ===== 加载动画 ===== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.nav-card {
+  animation: fadeInUp 0.3s ease forwards;
+  opacity: 0;
+}
+
+.nav-card:nth-child(1) { animation-delay: 0ms; }
+.nav-card:nth-child(2) { animation-delay: 30ms; }
+.nav-card:nth-child(3) { animation-delay: 60ms; }
+.nav-card:nth-child(4) { animation-delay: 90ms; }
+.nav-card:nth-child(5) { animation-delay: 120ms; }
+.nav-card:nth-child(6) { animation-delay: 150ms; }
+.nav-card:nth-child(7) { animation-delay: 180ms; }
+.nav-card:nth-child(8) { animation-delay: 210ms; }
+
+/* ===== 焦点样式 ===== */
+.nav-card:focus-visible,
+.nav-tab:focus-visible,
+.nav-search input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ===== 滚动条 ===== */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
 /* ===== 响应式 ===== */
 @media (max-width: 1024px) {
   .nav-grid {
