@@ -1,6 +1,7 @@
-﻿---
+---
 layout: modern-page
 title: 分布式事务的一致性解决方案
+description: 总结分布式事务的常见解决方案和实践经验
 extra_css: "/articles/articles.css"
 ---
 
@@ -8,23 +9,41 @@ extra_css: "/articles/articles.css"
   <a href="/articles/" class="article-detail-back">
     <i class="fas fa-arrow-left"></i> 返回文章列表
   </a>
-  <span class="article-detail-tag" style="background: #10b98115; color: #10b981;">🛠️ 解决方案</span>
+
+  <span class="article-detail-tag" style="background: rgba(16,185,129,0.1); color: #10b981;">🛠️ 解决方案</span>
   <h1 class="article-detail-title">分布式事务的一致性解决方案</h1>
+
   <div class="article-detail-meta">
     <span><i class="fas fa-user"></i> haome525</span>
     <span><i class="fas fa-calendar"></i> 2026-06-21</span>
     <span><i class="fas fa-clock"></i> 10分钟阅读</span>
   </div>
+
   <div class="article-detail-body">
-    <h2>分布式事务的挑战</h2><p>在分布式系统中，事务一致性是一个复杂的问题。网络延迟、节点故障、并发冲突都可能导致数据不一致。</p><h2>2PC与3PC</h2><p>两阶段提交（2PC）是最经典的分布式事务协议。它通过协调者管理事务的提交和回滚，但存在阻塞和单点问题。</p><h2>TCC模式</h2><p>TCC（Try-Confirm-Cancel）是一种业务层面的分布式事务解决方案。它将事务拆分为三个阶段，提供了更大的灵活性。</p><h2>Saga模式</h2><p>Saga模式通过一系列本地事务来实现分布式事务，每个事务都有对应的补偿操作。适用于长事务场景。</p>
+    <h2>分布式事务的挑战</h2>
+    <p>在分布式系统中，事务一致性是一个复杂的问题。网络延迟、节点故障、并发冲突都可能导致数据不一致。CAP定理告诉我们，一致性、可用性、分区容错性三者不可兼得。</p>
+
+    <h2>2PC与3PC</h2>
+    <p>两阶段提交（2PC）是最经典的分布式事务协议。它通过协调者管理事务的提交和回滚，但存在阻塞和单点问题。3PC是对2PC的改进，引入了超时机制。</p>
+
+    <h2>TCC模式</h2>
+    <p>TCC（Try-Confirm-Cancel）是一种业务层面的分布式事务解决方案。它将事务拆分为三个阶段：预留资源、确认提交、取消释放。适用于对一致性要求较高的场景。</p>
+
+    <h2>Saga模式</h2>
+    <p>Saga模式通过一系列本地事务来实现分布式事务，每个事务都有对应的补偿操作。适用于长事务场景，如电商订单流程。</p>
+
+    <h2>选型建议</h2>
+    <p>选择分布式事务方案需要考虑：一致性要求、性能要求、业务复杂度、团队技术栈等因素。没有最好的方案，只有最适合的方案。</p>
   </div>
+
   <div class="article-detail-tags">
     <span class="tag">分布式</span>
     <span class="tag">事务</span>
     <span class="tag">一致性</span>
   </div>
+
   <div class="article-detail-nav">
-    <a href="/articles/"><i class="fas fa-arrow-left"></i> 返回列表</a>
-    <a href="/articles/">返回列表 <i class="fas fa-arrow-right"></i></a>
+    <a href="/articles/high-concurrency-cache-design/"><i class="fas fa-arrow-left"></i> 上一篇：高并发缓存设计</a>
+    <a href="/articles/quantitative-investment-intro/">下一篇：量化投资入门 <i class="fas fa-arrow-right"></i></a>
   </div>
 </article>
