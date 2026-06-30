@@ -1,0 +1,30 @@
+﻿---
+layout: modern-page
+title: 高并发系统的缓存设计方案
+extra_css: "/articles/articles.css"
+---
+
+<article class="article-detail">
+  <a href="/articles/" class="article-detail-back">
+    <i class="fas fa-arrow-left"></i> 返回文章列表
+  </a>
+  <span class="article-detail-tag" style="background: #10b98115; color: #10b981;">🛠️ 解决方案</span>
+  <h1 class="article-detail-title">高并发系统的缓存设计方案</h1>
+  <div class="article-detail-meta">
+    <span><i class="fas fa-user"></i> haome525</span>
+    <span><i class="fas fa-calendar"></i> 2026-06-22</span>
+    <span><i class="fas fa-clock"></i> 11分钟阅读</span>
+  </div>
+  <div class="article-detail-body">
+    <h2>缓存策略设计</h2><p>合理的缓存策略是高并发系统的关键。常用的策略包括：Cache-Aside、Read-Through、Write-Through、Write-Behind。</p><h2>一致性处理</h2><p>缓存与数据库的一致性是分布式系统中的经典问题。常用的解决方案包括：延迟双删、基于MQ的异步更新、 Canal监听binlog。</p><h2>热点问题解决</h2><p>热点数据会导致缓存压力集中。解决方案包括：本地缓存、热点探测、缓存预热、分片存储。</p><h2>缓存雪崩防护</h2><p>缓存雪崩是高并发系统的常见问题。防护措施包括：随机过期时间、熔断降级、限流控制。</p>
+  </div>
+  <div class="article-detail-tags">
+    <span class="tag">缓存</span>
+    <span class="tag">高并发</span>
+    <span class="tag">方案</span>
+  </div>
+  <div class="article-detail-nav">
+    <a href="/articles/"><i class="fas fa-arrow-left"></i> 返回列表</a>
+    <a href="/articles/">返回列表 <i class="fas fa-arrow-right"></i></a>
+  </div>
+</article>

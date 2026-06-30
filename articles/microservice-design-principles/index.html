@@ -1,0 +1,30 @@
+﻿---
+layout: modern-page
+title: 微服务架构设计原则与最佳实践
+extra_css: "/articles/articles.css"
+---
+
+<article class="article-detail">
+  <a href="/articles/" class="article-detail-back">
+    <i class="fas fa-arrow-left"></i> 返回文章列表
+  </a>
+  <span class="article-detail-tag" style="background: #0ea5e915; color: #0ea5e9;">🏗️ 技术架构</span>
+  <h1 class="article-detail-title">微服务架构设计原则与最佳实践</h1>
+  <div class="article-detail-meta">
+    <span><i class="fas fa-user"></i> haome525</span>
+    <span><i class="fas fa-calendar"></i> 2026-06-27</span>
+    <span><i class="fas fa-clock"></i> 12分钟阅读</span>
+  </div>
+  <div class="article-detail-body">
+    <h2>微服务架构核心原则</h2><p>微服务架构是一种将应用程序构建为小型、独立部署服务集合的方法。每个服务围绕特定业务能力构建，运行在自己的进程中，通过轻量级机制（通常是HTTP API）进行通信。</p><h2>服务拆分策略</h2><p>合理的服务拆分是微服务架构成功的关键。常用策略包括：按业务能力拆分、按子域拆分、按数据所有权拆分。</p><h2>服务通信设计</h2><p>微服务间的通信方式主要分为同步通信（REST、gRPC）和异步通信（消息队列）。选择合适的通信方式对系统性能和可靠性至关重要。</p><h2>数据管理策略</h2><p>每个微服务应拥有自己的数据存储，避免直接访问其他服务的数据库。常用的模式包括：数据库per服务、CQRS、事件溯源。</p><h2>容错与降级</h2><p>分布式系统中，故障是不可避免的。需要设计完善的容错机制：熔断器模式、重试策略、超时控制、降级方案。</p>
+  </div>
+  <div class="article-detail-tags">
+    <span class="tag">微服务</span>
+    <span class="tag">设计</span>
+    <span class="tag">原则</span>
+  </div>
+  <div class="article-detail-nav">
+    <a href="/articles/"><i class="fas fa-arrow-left"></i> 返回列表</a>
+    <a href="/articles/">返回列表 <i class="fas fa-arrow-right"></i></a>
+  </div>
+</article>

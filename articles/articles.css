@@ -1,6 +1,41 @@
 /* ============================================================
-   文章页专用样式 — 总览 / 卡片·列表切换 / 分类筛选 / 详情页
+   文章页专用样式 — 搜索栏 / 总览 / 卡片·列表切换 / 分类筛选 / 详情页
    ============================================================ */
+
+/* ---------- 搜索栏 ---------- */
+.nav-search {
+  max-width: 600px;
+  margin: 0 auto 24px;
+  position: relative;
+}
+.nav-search input {
+  width: 100%;
+  padding: 14px 20px 14px 48px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-card);
+  color: var(--text);
+  font-size: 15px;
+  outline: none;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+}
+.nav-search input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-bg);
+}
+.nav-search input::placeholder {
+  color: var(--text-muted);
+}
+.nav-search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 16px;
+  pointer-events: none;
+}
 
 /* ---------- 顶部概览统计 ---------- */
 .article-overview {

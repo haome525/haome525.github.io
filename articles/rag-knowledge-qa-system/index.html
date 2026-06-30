@@ -1,0 +1,76 @@
+---
+layout: modern-page
+title: RAG技术实践：构建企业级知识问答系统
+description: 分享基于RAG技术构建私有化知识问答系统的实践经验
+extra_css: "/articles/articles.css"
+---
+
+<article class="article-detail">
+  <a href="/articles/" class="article-detail-back">
+    <i class="fas fa-arrow-left"></i> 返回文章列表
+  </a>
+
+  <span class="article-detail-tag" style="background: rgba(99,102,241,0.1); color: #6366f1;">🤖 人工智能</span>
+  <h1 class="article-detail-title">RAG技术实践：构建企业级知识问答系统</h1>
+
+  <div class="article-detail-meta">
+    <span><i class="fas fa-user"></i> haome525</span>
+    <span><i class="fas fa-calendar"></i> 2026-06-28</span>
+    <span><i class="fas fa-clock"></i> 10分钟阅读</span>
+  </div>
+
+  <div class="article-detail-body">
+    <h2>RAG技术概述</h2>
+    <p>RAG（Retrieval-Augmented Generation，检索增强生成）是一种结合检索系统和大语言模型的技术方案。它通过检索外部知识库中的相关信息，增强大模型的回答能力，特别适合企业级知识问答场景。</p>
+    <p>相比纯大模型方案，RAG具有以下优势：知识可更新、回答可溯源、减少幻觉、保护数据隐私。</p>
+
+    <h2>系统架构设计</h2>
+    <p>我们的企业级知识问答系统采用分层架构设计：</p>
+    <p><strong>1. 数据层</strong>：负责知识的采集、清洗和存储。支持多种文档格式（PDF、Word、Markdown等），自动提取文本并进行分块处理。</p>
+    <p><strong>2. 向量化层</strong>：将文本转换为向量表示，使用Embedding模型进行语义编码，存储到向量数据库中。</p>
+    <p><strong>3. 检索层</strong>：实现混合检索策略，结合语义检索和关键词检索，通过重排序提升检索质量。</p>
+    <p><strong>4. 生成层</strong>：将检索结果与用户问题组合，调用大模型生成最终答案。</p>
+
+    <h2>知识库构建流程</h2>
+    <p>知识库的质量直接决定了问答系统的效果。我们的构建流程包括：</p>
+    <p>• 文档采集：从企业内部系统自动采集文档</p>
+    <p>• 文本提取：使用OCR和文档解析工具提取文本</p>
+    <p>• 智能分块：基于语义边界进行文档分块，保持上下文完整性</p>
+    <p>• 元数据标注：为每个文档块添加来源、日期、作者等元数据</p>
+
+    <h2>向量检索优化</h2>
+    <p>向量检索的效果直接影响问答质量。我们从以下几个方面进行了优化：</p>
+    <p>• Embedding模型选择：对比测试了多个模型，选择最适合中文场景的模型</p>
+    <p>• 混合检索策略：结合向量检索和BM25关键词检索</p>
+    <p>• 重排序模型：使用交叉编码器对检索结果进行重排序</p>
+    <p>• 查询改写：对用户问题进行改写和扩展，提升检索召回率</p>
+
+    <h2>问答质量提升策略</h2>
+    <p>为了提升问答质量，我们实施了多项策略：</p>
+    <p>• Prompt工程：设计高质量的提示模板，引导大模型生成准确答案</p>
+    <p>• 答案验证：对生成的答案进行事实性验证</p>
+    <p>• 引用溯源：在答案中标注信息来源，支持用户验证</p>
+    <p>• 反馈机制：建立用户反馈收集和模型迭代机制</p>
+
+    <h2>部署与运维经验</h2>
+    <p>在部署和运维方面，我们总结了以下经验：</p>
+    <p>• 性能优化：通过缓存、异步处理等手段提升系统响应速度</p>
+    <p>• 监控告警：建立完善的监控体系，及时发现和解决问题</p>
+    <p>• 知识更新：建立自动化的知识更新机制，保持知识库的时效性</p>
+
+    <h2>总结</h2>
+    <p>构建企业级知识问答系统是一项复杂的工程，需要在检索质量、生成效果、系统性能等方面进行持续优化。通过RAG技术，我们成功构建了一个高质量的知识问答系统，为企业知识管理提供了有力支持。</p>
+  </div>
+
+  <div class="article-detail-tags">
+    <span class="tag">RAG</span>
+    <span class="tag">知识库</span>
+    <span class="tag">实践</span>
+    <span class="tag">企业级</span>
+  </div>
+
+  <div class="article-detail-nav">
+    <a href="/articles/llm-architecture-evolution/"><i class="fas fa-arrow-left"></i> 上一篇：大模型时代的技术架构演进</a>
+    <a href="/articles/microservice-design-principles/">下一篇：微服务架构设计原则 <i class="fas fa-arrow-right"></i></a>
+  </div>
+</article>

@@ -2,12 +2,46 @@
 layout: modern-page
 title: 文章
 description: 技术文章与深度思考
-extra_css: ""
+extra_css: "/articles/articles.css"
 ---
 
-<section class="placeholder-page">
-  <div class="placeholder-icon"><i class="fas fa-newspaper"></i></div>
+<!-- Page Hero -->
+<section class="page-hero">
   <h1>文章</h1>
-  <p class="placeholder-desc">技术文章与深度思考，内容持续完善中。</p>
-  <a href="/" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> 返回首页</a>
+  <p>技术文章与深度思考 — 从AI到架构，从实践到思考</p>
 </section>
+
+<!-- 搜索栏 -->
+<div class="nav-search">
+  <span class="nav-search-icon">🔍</span>
+  <input type="text" id="articleSearchInput" placeholder="搜索文章标题、摘要或标签…" autocomplete="off">
+</div>
+
+<!-- 统计概览 -->
+<div class="article-overview" id="articleOverview"></div>
+
+<!-- 分类Tab + 视图切换 -->
+<section class="article-toolbar">
+  <div class="article-filters" id="articleTabs"></div>
+  <div class="article-view-toggle" role="group" aria-label="视图切换">
+    <button class="article-view-btn active" data-view="grid" aria-label="卡片视图">
+      <i class="fas fa-th-large"></i> 卡片
+    </button>
+    <button class="article-view-btn" data-view="list" aria-label="列表视图">
+      <i class="fas fa-list"></i> 列表
+    </button>
+  </div>
+</section>
+
+<!-- 卡片视图 -->
+<section class="article-grid" id="articleGrid"></section>
+
+<!-- 列表视图 -->
+<section class="article-list" id="articleList"></section>
+
+<!-- 统计信息 -->
+<div class="article-stats" id="articleStats"></div>
+
+<!-- 脚本 -->
+<script src="/articles/articles-data.js"></script>
+<script src="/articles/articles.js"></script>

@@ -1,0 +1,67 @@
+---
+layout: modern-page
+title: 大模型时代的技术架构演进
+description: 探讨大语言模型如何重塑软件架构
+extra_css: "/articles/articles.css"
+---
+
+<article class="article-detail">
+  <a href="/articles/" class="article-detail-back">
+    <i class="fas fa-arrow-left"></i> 返回文章列表
+  </a>
+
+  <span class="article-detail-tag" style="background: rgba(99,102,241,0.1); color: #6366f1;">🤖 人工智能</span>
+  <h1 class="article-detail-title">大模型时代的技术架构演进</h1>
+
+  <div class="article-detail-meta">
+    <span><i class="fas fa-user"></i> haome525</span>
+    <span><i class="fas fa-calendar"></i> 2026-06-30</span>
+    <span><i class="fas fa-clock"></i> 8分钟阅读</span>
+  </div>
+
+  <div class="article-detail-body">
+    <h2>引言</h2>
+    <p>大语言模型（LLM）的快速发展正在深刻改变软件架构的设计范式。从传统的规则引擎到智能推理，从固定的业务逻辑到动态的AI辅助决策，软件架构正在经历一场前所未有的变革。</p>
+
+    <h2>传统架构 vs AI-native架构</h2>
+    <p>传统软件架构基于确定性的业务规则，系统的行为完全由代码决定。而AI-native架构则引入了概率性推理，系统能够在面对模糊、复杂场景时做出更智能的决策。</p>
+    <p>这种转变不仅仅是技术层面的升级，更是思维方式的根本变化。开发者需要从"编写规则"转变为"训练模型"，从"处理输入输出"转变为"管理知识和推理"。</p>
+
+    <h2>大模型应用的典型架构模式</h2>
+    <p>当前大模型应用的架构主要呈现以下几种模式：</p>
+    <p><strong>1. 直接调用模式</strong>：最简单的方式，直接调用大模型API获取结果。适用于简单场景，但缺乏定制化能力。</p>
+    <p><strong>2. RAG（检索增强生成）模式</strong>：通过检索外部知识库增强大模型的回答能力。这是目前企业级应用的主流方案。</p>
+    <p><strong>3. Agent模式</strong>：赋予大模型工具使用能力，使其能够执行复杂的多步骤任务。这是最具潜力的发展方向。</p>
+
+    <h2>RAG架构设计要点</h2>
+    <p>RAG架构的核心在于如何高效地检索相关知识，并将其与大模型的推理能力结合。关键设计要点包括：</p>
+    <p>• 知识库的构建与维护：包括文档解析、分块策略、向量化存储</p>
+    <p>• 检索策略优化：语义检索、混合检索、重排序</p>
+    <p>• 上下文管理：如何将检索结果有效传递给大模型</p>
+    <p>• 质量评估：建立自动化的RAG系统质量评估体系</p>
+
+    <h2>Agent架构的演进</h2>
+    <p>Agent架构代表了大模型应用的未来方向。通过赋予大模型工具使用、规划推理、记忆管理等能力，Agent能够完成更加复杂的任务。</p>
+    <p>当前Agent架构的主要挑战包括：工具调用的可靠性、多步推理的准确性、长期记忆的管理等。这些问题的解决将决定Agent架构的成熟度。</p>
+
+    <h2>实践案例分享</h2>
+    <p>在实际项目中，我们采用了RAG+Agent的混合架构，构建了一个企业级知识问答系统。该系统能够自动从企业文档中提取知识，回答员工的技术问题，并在必要时调用内部工具完成特定任务。</p>
+    <p>通过这种方式，我们将知识检索的准确率提升到了95%以上，同时将人工处理的工作量降低了60%。</p>
+
+    <h2>总结与展望</h2>
+    <p>大模型时代的技术架构仍在快速演进中。作为开发者，我们需要保持开放的心态，持续学习和实践。未来的软件架构将更加智能、灵活和自适应，而我们正在见证这场变革的开端。</p>
+  </div>
+
+  <div class="article-detail-tags">
+    <span class="tag">AI</span>
+    <span class="tag">大模型</span>
+    <span class="tag">架构</span>
+    <span class="tag">RAG</span>
+    <span class="tag">Agent</span>
+  </div>
+
+  <div class="article-detail-nav">
+    <a href="/articles/rag-knowledge-qa-system/"><i class="fas fa-arrow-left"></i> 上一篇：RAG技术实践</a>
+    <a href="/articles/">返回列表 <i class="fas fa-arrow-right"></i></a>
+  </div>
+</article>

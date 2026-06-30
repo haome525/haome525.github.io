@@ -1,0 +1,30 @@
+﻿---
+layout: modern-page
+title: 分布式事务的一致性解决方案
+extra_css: "/articles/articles.css"
+---
+
+<article class="article-detail">
+  <a href="/articles/" class="article-detail-back">
+    <i class="fas fa-arrow-left"></i> 返回文章列表
+  </a>
+  <span class="article-detail-tag" style="background: #10b98115; color: #10b981;">🛠️ 解决方案</span>
+  <h1 class="article-detail-title">分布式事务的一致性解决方案</h1>
+  <div class="article-detail-meta">
+    <span><i class="fas fa-user"></i> haome525</span>
+    <span><i class="fas fa-calendar"></i> 2026-06-21</span>
+    <span><i class="fas fa-clock"></i> 10分钟阅读</span>
+  </div>
+  <div class="article-detail-body">
+    <h2>分布式事务的挑战</h2><p>在分布式系统中，事务一致性是一个复杂的问题。网络延迟、节点故障、并发冲突都可能导致数据不一致。</p><h2>2PC与3PC</h2><p>两阶段提交（2PC）是最经典的分布式事务协议。它通过协调者管理事务的提交和回滚，但存在阻塞和单点问题。</p><h2>TCC模式</h2><p>TCC（Try-Confirm-Cancel）是一种业务层面的分布式事务解决方案。它将事务拆分为三个阶段，提供了更大的灵活性。</p><h2>Saga模式</h2><p>Saga模式通过一系列本地事务来实现分布式事务，每个事务都有对应的补偿操作。适用于长事务场景。</p>
+  </div>
+  <div class="article-detail-tags">
+    <span class="tag">分布式</span>
+    <span class="tag">事务</span>
+    <span class="tag">一致性</span>
+  </div>
+  <div class="article-detail-nav">
+    <a href="/articles/"><i class="fas fa-arrow-left"></i> 返回列表</a>
+    <a href="/articles/">返回列表 <i class="fas fa-arrow-right"></i></a>
+  </div>
+</article>
