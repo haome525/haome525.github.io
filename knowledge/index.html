@@ -1,0 +1,51 @@
+---
+layout: modern-page
+title: 知识
+description: 个人 Wiki 知识库
+extra_css: "/knowledge/knowledge.css"
+---
+
+<!-- Page Hero -->
+<section class="knowledge-hero">
+  <h1>知识 · 个人 Wiki 知识库</h1>
+  <p>持续积累，系统思考 — 从技术到生活，构建你的知识体系</p>
+</section>
+
+<!-- Search Bar -->
+<div class="knowledge-search">
+  <div class="knowledge-search-inner">
+    <span class="knowledge-search-icon">🔍</span>
+    <input type="text" id="knowledgeSearch" placeholder="搜索知识标题、描述或标签…" autocomplete="off">
+    <span class="knowledge-search-clear" id="searchClear">✕</span>
+  </div>
+</div>
+
+<!-- Stats Overview -->
+<div class="knowledge-stats" id="knowledgeStats"></div>
+
+<!-- Zone Tabs -->
+<div class="knowledge-zones" id="knowledgeZones"></div>
+
+<!-- Main Content Area -->
+<div class="knowledge-main">
+  <!-- Left Sidebar: Category Tree -->
+  <aside class="knowledge-sidebar" id="knowledgeSidebar">
+    <div class="knowledge-tree" id="knowledgeTree"></div>
+  </aside>
+
+  <!-- Right Content -->
+  <div class="knowledge-content" id="knowledgeContent">
+    <!-- Breadcrumb -->
+    <nav class="knowledge-breadcrumb" id="breadcrumb"></nav>
+    <!-- Toolbar -->
+    <div class="knowledge-toolbar" id="knowledgeToolbar"></div>
+    <!-- Entry List (Grid/List) -->
+    <div class="knowledge-entry-list" id="entryList"></div>
+    <!-- Entry Detail -->
+    <div class="knowledge-entry-detail" id="entryDetail" style="display:none"></div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="/knowledge/knowledge-data.js"></script>
+<script src="/knowledge/knowledge.js"></script>

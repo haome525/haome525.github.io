@@ -38,7 +38,7 @@ a:hover { color: var(--accent-light); }
 /* ===== 页面Hero ===== */
 .nav-hero {
   text-align: center;
-  padding: var(--space-2xl) var(--space-lg);
+  padding: calc(var(--nav-height) + var(--space-xl)) var(--space-lg) var(--space-2xl);
   background: linear-gradient(135deg, var(--bg) 0%, var(--bg-card) 100%);
 }
 

@@ -114,3 +114,7 @@ defaults:
       path: "articles"
     values:
       layout: modern-page
+  - scope:
+      path: "knowledge"
+    values:
+      layout: modern-page
